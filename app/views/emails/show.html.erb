@@ -29,7 +29,7 @@
 
 <p>
   <strong>Creted at:</strong>
-  <time><%= email.created_at.strftime("%H:%M, %d %b %Y") %></time>
+  <time><%= @email.created_at.strftime("%H:%M, %d %b %Y") %></time>
 </p>
 
 <%= link_to 'Back', emails_path, class: "btn btn-flat" %>
