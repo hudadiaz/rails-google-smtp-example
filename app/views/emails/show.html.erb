@@ -1,18 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= "Email ##{@email.id}" %></h1>
+
 <p>
   <strong>To:</strong>
-  <%= @email.to.to_s.split(',') %>
+  <%= pluralize(@email.to.to_s.split(',').size, 'email') %>
 </p>
 
 <p>
   <strong>Cc:</strong>
-  <%= @email.cc.to_s.split(',') %>
+  <%= pluralize(@email.cc.to_s.split(',').size, 'email') %>
 </p>
 
 <p>
   <strong>Bcc:</strong>
-  <%= @email.bcc.to_s.split(',') %>
+  <%= pluralize(@email.bcc.to_s.split(',').size, 'email') %>
 </p>
 
 <p>
@@ -26,8 +28,8 @@
 </p>
 
 <p>
-  <strong>Status:</strong>
-  <%= @email.status %>
+  <strong>Creted at:</strong>
+  <time><%= email.created_at.strftime("%H:%M, %d %b %Y") %></time>
 </p>
 
 <%= link_to 'Back', emails_path, class: "btn btn-flat" %>
