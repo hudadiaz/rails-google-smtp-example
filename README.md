@@ -1,11 +1,10 @@
 # Rails Gmail SMTP Sample
 
-This is a simple app that takes some input to send emails.
+This is a simple app that takes some input to send emails. Emails will be sent as `GMAIL_ACCOUNT`.
 
 ## Inputs
 
  - to (comma seperated) **required**
- - from (must be valid gmail email?)
  - cc (comma seperated)
  - cc (comma seperated)
  - subject **required**
@@ -15,8 +14,8 @@ This is a simple app that takes some input to send emails.
 
   Set these env to use the app:
   
-  - GMAIL_ACCOUNT
-  - GMAIL_ACCOUNT_PASSWORD
+  - `GMAIL_ACCOUNT`
+  - `GMAIL_ACCOUNT_PASSWORD`
   
 ## Google Settings
 
@@ -30,4 +29,4 @@ Based on this [question](http://stackoverflow.com/a/20262500) on SO, you need to
 
 If that is not enough, go to Google Security page, and toggle [Allow less secure apps](https://myaccount.google.com/security#connectedapps) to ON.
 
-**note: this muse be the account you set as GOOGLE_ACCOUNT**
+**note: this muse be the account you set as `GMAIL_ACCOUNT`**
