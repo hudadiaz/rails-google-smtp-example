@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Emails</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>To</th>
+      <th>From</th>
+      <th>Subject</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @emails.each do |email| %>
+      <tr>
+        <td><%= email.to.to_s.split(',') %></td>
+        <td><%= email.from || "<em>default</em>".html_safe %></td>
+        <td><%= email.subject %></td>
+        <td><%= email.status %></td>
+        <td><%= link_to 'Show', email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large" href="<%= new_email_path %>">
+    <i class="large material-icons">add</i>
+  </a>
+</div>

@@ -1,0 +1,42 @@
+<%= form_for(email) do |f| %>
+  <% if email.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(email.errors.count, "error") %> prohibited this email from being saved:</h2>
+
+      <ul>
+      <% email.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-field">
+    <%= f.text_field :to %>
+    <%= f.label :to %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_field :cc %>
+    <%= f.label :cc %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_field :bcc %>
+    <%= f.label :bcc %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_field :subject %>
+    <%= f.label :subject %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_area :content, class: "materialize-textarea" %>
+    <%= f.label :content %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: 'btn' %>
+  </div>
+<% end %>
