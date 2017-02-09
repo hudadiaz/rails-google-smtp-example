@@ -33,6 +33,6 @@ note: **these changes musy be made on the account you set as `GMAIL_ACCOUNT`**
 
 ## What cannot be done
 
-You can only send email from `GMAIL_ACCOUNT`. *another bummer
+You can only send email from `GMAIL_ACCOUNT`. *another bummer*
 
 Read this http://stackoverflow.com/questions/109520/rails-and-gmail-smtp-how-to-use-a-custom-from-address
