@@ -6,7 +6,7 @@ This is a simple app that takes some input to send emails. Emails will be sent a
 
  - to (comma seperated) **required**
  - cc (comma seperated)
- - cc (comma seperated)
+ - bcc (comma seperated)
  - subject **required**
  - content **required**
  
@@ -30,3 +30,9 @@ Based on this [question](http://stackoverflow.com/a/20262500) on SO, you need to
 If that is not enough, go to Google Security page, and toggle [Allow less secure apps](https://myaccount.google.com/security#connectedapps) to ON.
 
 note: **these changes musy be made on the account you set as `GMAIL_ACCOUNT`**
+
+## What cannot be done
+
+You can only send email from `GMAIL_ACCOUNT`. *another bummer
+
+Read this http://stackoverflow.com/questions/109520/rails-and-gmail-smtp-how-to-use-a-custom-from-address
