@@ -3,7 +3,7 @@ class EmailMailer < ApplicationMailer
     @email = email
     mail(
       to: @email.to.to_s.split(','),
-      from: @email.from || ApplicationMailer::DEFAULT_FROM,
+      from: ApplicationMailer::DEFAULT_FROM,
       cc: @email.cc.to_s.split(','),
       bcc: @email.bcc.to_s.split(','),
       subject: @email.subject,

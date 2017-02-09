@@ -14,6 +14,5 @@ class Email < ApplicationRecord
     to = to.to_s.gsub(' ', '')
     cc = cc.to_s.gsub(' ', '')
     bcc = bcc.to_s.gsub(' ', '')
-    from = from.to_s.gsub(' ', '')
   end
 end

@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>To</th>
-      <th>From</th>
       <th>Subject</th>
-      <th>Status</th>
+      <th>Created at</th>
       <th></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
   <tbody>
     <% @emails.each do |email| %>
       <tr>
-        <td><%= email.to.to_s.split(',') %></td>
-        <td><%= email.from || "<em>default</em>".html_safe %></td>
+        <th><%= email.id %></th>
+        <td><%= pluralize(email.to.to_s.split(',').size, 'email') %></td>
         <td><%= email.subject %></td>
-        <td><%= email.status %></td>
+        <td><time><%= email.created_at.strftime("%H:%M, %d %b %Y") %></time></td>
         <td><%= link_to 'Show', email %></td>
       </tr>
     <% end %>
