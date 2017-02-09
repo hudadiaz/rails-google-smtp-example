@@ -2,29 +2,31 @@
 
 <h2>Emails</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>To</th>
-      <th>Subject</th>
-      <th>Created at</th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @emails.each do |email| %>
+<div style="overflow-x: scroll;">
+  <table>
+    <thead>
       <tr>
-        <th><%= email.id %></th>
-        <td><%= pluralize(email.to.to_s.split(',').size, 'email') %></td>
-        <td><%= email.subject %></td>
-        <td><time><%= email.created_at.strftime("%H:%M, %d %b %Y") %></time></td>
-        <td><%= link_to 'Show', email %></td>
+        <th>ID</th>
+        <th>To</th>
+        <th>Subject</th>
+        <th>Created at</th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+  
+    <tbody>
+      <% @emails.each do |email| %>
+        <tr>
+          <th><%= email.id %></th>
+          <td><%= pluralize(email.to.to_s.split(',').size, 'email') %></td>
+          <td><%= email.subject %></td>
+          <td><time><%= email.created_at.strftime("%H:%M, %d %b %Y") %></time></td>
+          <td><%= link_to 'Show', email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 <br>
 
