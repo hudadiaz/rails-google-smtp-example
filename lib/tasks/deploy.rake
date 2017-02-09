@@ -5,3 +5,5 @@ namespace :deploy do
     db_namespace["_dump"].invoke
   end
 end
+
+Rake::Task['deploy:migrate'].invoke
