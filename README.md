@@ -19,7 +19,7 @@ This is a simple app that takes some input to send emails. Emails will be sent a
   
 ## Google Settings
 
-Because Google cares about security, the app wont be able to send email out of the box. *bummer*
+Because Google cares about security, the app **most probably** wont be able to send email out of the box. *bummer*
 
 ### What to do
 
