@@ -1,24 +1,33 @@
-# README
+# Rails Gmail SMTP Sample
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple app that takes some input to send emails.
 
-Things you may want to cover:
+## Inputs
 
-* Ruby version
+ - to (comma seperated) **required**
+ - from (must be valid gmail email?)
+ - cc (comma seperated)
+ - cc (comma seperated)
+ - subject **required**
+ - content **required**
+ 
+## ENV Config
 
-* System dependencies
+  Set these env to use the app:
+  
+  - GMAIL_ACCOUNT
+  - GMAIL_ACCOUNT_PASSWORD
+  
+## Google Settings
 
-* Configuration
+Because Google cares about security, the app wont be able to send email out of the box. *bummer*
 
-* Database creation
+### What to do
 
-* Database initialization
+Based on this [question](http://stackoverflow.com/a/20262500) on SO, you need to visit this link:
 
-* How to run the test suite
+[Allow access to your Google account](http://www.google.com/accounts/DisplayUnlockCaptcha)
 
-* Services (job queues, cache servers, search engines, etc.)
+If that is not enough, go to Google Security page, and toggle [Allow less secure apps](https://myaccount.google.com/security#connectedapps) to ON.
 
-* Deployment instructions
-
-* ...
+**note: this muse be the account you set as GOOGLE_ACCOUNT**
