@@ -14,7 +14,7 @@ This is a simple app that takes some input to send emails. Emails will be sent a
 
   Set these env to use the app:
   
-  - `GMAIL_ACCOUNT`
+  - `GMAIL_ACCOUNT` must be an email address. It will be used to send emails
   - `GMAIL_ACCOUNT_PASSWORD`
   
 ## Google Settings
@@ -29,7 +29,7 @@ Based on this [question](http://stackoverflow.com/a/20262500) on SO, you need to
 
 If that is not enough, go to Google Security page, and toggle [Allow less secure apps](https://myaccount.google.com/security#connectedapps) to ON.
 
-note: **these changes musy be made on the account you set as `GMAIL_ACCOUNT`**
+note: **these changes must be made on the account you set as `GMAIL_ACCOUNT`**
 
 ## What cannot be done
 
